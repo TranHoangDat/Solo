@@ -1,0 +1,37 @@
+export const Url = 'http://localhost:5000';
+export const USER_ACCESS_TOKEN = 'AccessToken';
+
+//Constant of Project context
+export const PROJECT_ACTIVE = 'PROJECT_ACTIVE'
+export const PROJECTS_LOADED_SUCCESS = 'PROJECTS_LOADED_SUCCESS'
+export const PROJECTS_LOADED_FAIL = 'PROJECTS_LOADED_FAIL'
+export const ADD_PROJECT = 'ADD_PROJECT'
+export const DELETE_PROJECT = 'DELETE_PROJECT'
+export const UPDATE_PROJECT = 'UPDATE_PROJECT'
+export const FIND_PROJECT = 'FIND_PROJECT'
+
+//Constant of Section context
+export const SECTIONS_LOADED_SUCCESS = 'SECTIONS_LOADED_SUCCESS'
+export const SECTIONS_LOADED_FAIL = 'SECTIONS_LOADED_FAIL'
+export const ADD_SECTION = 'ADD_SECTION'
+export const DELETE_SECTION = 'DELETE_SECTION'
+export const UPDATE_SECTION = 'UPDATE_SECTION'
+export const FIND_SECTION = 'FIND_SECTION'
+
+//Constant of Task context
+export const TASKS_LOADED_SUCCESS = 'TASKS_LOADED_SUCCESS'
+export const TASKS_LOADED_FAIL = 'TASKS_LOADED_FAIL'
+export const ADD_TASK = 'ADD_TASK'
+export const DELETE_TASK = 'DELETE_TASK'
+export const UPDATE_TASKS = 'UPDATE_TASKS'
+export const UPDATE_TASK = 'UPDATE_TASK'
+export const FIND_TASK = 'FIND_TASK'
+
+//Constant of Collaborator context 
+export const LOAD_COLLABORATORS_SUCCESS = 'LOAD_COLLABORATORS_SUCCESS'
+export const LOAD_COLLABORATORS_FAIL = 'LOAD_COLLABORATORS_FAIL'
+export const DELETE_COLLABORATOR = 'DELETE_COLLABORATOR'
+export const LOAD_INVITED_USERS_SUCCESS = 'LOAD_INVITED_USERS_SUCCESS'
+export const LOAD_INVITED_USERS_FAIL = 'LOAD_INVITED_USERS_FAIL'
+export const INVITE_USER = 'INVITE_USER'
+export const DELETE_INVITED_USER = 'DELETE_INVITED_USER'

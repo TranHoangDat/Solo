@@ -1,0 +1,52 @@
+.calendar__tab_wrapper {
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  border-bottom: 1px solid #f0f0f0;
+
+  &.before {
+    .day__value {
+      color: #cccccc;
+    }
+    cursor: auto;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  &.today {
+    &.selected {
+      .day__value {
+        color: #dd4b39;
+      }
+    }
+
+    &:hover {
+      .day__value {
+        color: #dd4b39;
+      }
+    }
+  }
+
+  &.selected {
+    .day__value {
+      font-weight: 700;
+    }
+    border-bottom: 1px solid #dd4b39;
+  }
+
+  &:hover {
+    background-color: #eeeeee;
+  }
+
+  .day__name {
+    padding-top: 0.5rem;
+    font-size: 0.725rem;
+    color: #808080;
+  }
+
+  .day__value {
+    padding: 0.3rem 0 0.55rem;
+  }
+}

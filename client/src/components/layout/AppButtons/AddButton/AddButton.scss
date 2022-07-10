@@ -1,0 +1,200 @@
+@import "@assets_styles/AppMixins";
+
+.add__btn {
+  .add__btn_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+    cursor: pointer;
+
+    .btn__icon {
+      display: block;
+      border-radius: 50%;
+    }
+
+    .btn__name {
+      display: block;
+      font-size: 0.825rem;
+      font-weight: 700;
+    }
+  }
+
+  &:hover {
+    .add__btn_wrapper {
+      .btn__name {
+        color: #ce5542;
+      }
+    }
+  }
+
+  &.add_task__btn {
+    .add__btn_wrapper {
+      justify-content: flex-start;
+
+      .btn__icon {
+        width: 21px;
+        height: 21px;
+
+        .icon {
+          color: #e16151;
+        }
+      }
+
+      .btn__name {
+        font-size: 0.84rem;
+        font-weight: 400;
+        color: $generic-gray-txt-clr;
+        padding-top: 2px;
+        margin-left: 0.5rem;
+      }
+    }
+
+    &:hover {
+      .add__btn_wrapper {
+        .btn__icon {
+          .icon {
+            color: #f1c5c2;
+          }
+          background-color: #e16151;
+        }
+        .btn__name {
+          color: #ce5542;
+        }
+      }
+    }
+  }
+
+  &.add_section__btn {
+    margin-top: 0.45rem;
+
+    .add__btn_wrapper {
+      position: relative;
+      opacity: 0;
+      transition: opacity 0.15s ease;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: calc(50% - 0.5rem);
+        border-left: 1px solid #ce5542;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: calc(50% - 0.75rem);
+        border-right: 1px solid #ce5542;
+      }
+    }
+
+    .btn__name {
+      color: #cc5647;
+      background-color: #fff;
+    }
+
+    &:hover {
+      .add__btn_wrapper {
+        opacity: 1;
+      }
+    }
+
+    &.list__view {
+      .add__btn_wrapper {
+        &::before {
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          width: calc(50% - 3rem);
+          height: auto;
+          border-left: none;
+          border-top: 1px solid #e6aaa0;
+        }
+
+        &::after {
+          top: 50%;
+          left: unset;
+          bottom: unset;
+          right: 0;
+          transform: translateY(-50%);
+          width: calc(50% - 3rem);
+          height: auto;
+          border-right: none;
+          border-bottom: 1px solid #e6aaa0;
+        }
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &.add_time__btn {
+    &.child {
+      .add__btn_wrapper {
+        .btn__icon {
+          background-color: transparent;
+          .icon {
+            color: #cc5647;
+          }
+        }
+
+        .btn__name {
+          color: #ce5542;
+        }
+      }
+
+      &:hover {
+        .add__btn_wrapper {
+          .btn__icon {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+}
+
+.add_section__btn.full {
+  margin-top: 0.45rem;
+  min-width: 22.75rem;
+  height: fit-content;
+  cursor: pointer;
+
+  .add__btn_wrapper {
+    width: 16.25rem;
+    height: 2.5rem;
+    border-radius: 0.3rem;
+    background-color: #fafafa;
+    display: flex;
+    align-items: center;
+    padding-left: 1.25rem;
+
+    .btn__icon {
+      display: block;
+      width: auto;
+      height: auto;
+      margin-right: 0.75rem;
+    }
+
+    .btn__name {
+      display: block;
+      font-size: 0.825rem;
+      color: $generic-gray-txt-clr;
+    }
+
+    &:hover {
+      .icon,
+      .btn__name {
+        color: #db4c3f;
+      }
+    }
+  }
+}

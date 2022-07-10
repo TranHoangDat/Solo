@@ -1,0 +1,38 @@
+@import "@assets_styles/AppMixins";
+
+.app__btn_wrapper {
+  position: relative;
+
+  .btn__name {
+    display: none;
+  }
+
+  .btn__icon {
+    color: unset;
+    font-size: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .icon {
+    color: #808080;
+    width: 21px !important;
+    height: 21px !important;
+  }
+
+  .btn__name_wrapper {
+    input[type="radio"] {
+      cursor: pointer;
+    }
+
+    &:hover,
+    &:focus {
+      & ~ .app__label_wrapper {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}

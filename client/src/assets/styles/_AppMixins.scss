@@ -1,0 +1,117 @@
+@import "./AppVariables";
+
+@mixin responsive_375() {
+  @media #{$res_375} {
+    @content;
+  }
+}
+
+@mixin responsive_425() {
+  @media #{$res_425} {
+    @content;
+  }
+}
+
+@mixin responsive_450() {
+  @media #{$res_450} {
+    @content;
+  }
+}
+
+@mixin responsive_480() {
+  @media #{$res_480} {
+    @content;
+  }
+}
+
+@mixin responsive_500() {
+  @media #{$res_500} {
+    @content;
+  }
+}
+
+@mixin responsive_650() {
+  @media #{$res_650} {
+    @content;
+  }
+}
+
+@mixin responsive_750() {
+  @media #{$res_750} {
+    @content;
+  }
+}
+
+@mixin responsive_751 {
+  @media #{$res_751} {
+    @content;
+  }
+}
+
+@mixin responsive_768() {
+  @media #{$res_768} {
+    @content;
+  }
+}
+
+@mixin responsive_811() {
+  @media #{$res_811} {
+    @content;
+  }
+}
+
+@mixin responsive_1057() {
+  @media #{$res_1057} {
+    @content;
+  }
+}
+
+@mixin responsive_1280() {
+  @media #{$res_1280} {
+    @content;
+  }
+}
+
+@mixin responsive_1440() {
+  @media #{$res_1440} {
+    @content;
+  }
+}
+
+@mixin responsive_1550() {
+  @media #{$res_1550} {
+    @content;
+  }
+}
+
+@mixin box-overlay() {
+  box-shadow: $generic-box-shadow;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  border-radius: 3px;
+}
+
+@mixin va($va-align: center) {
+  display: flex;
+  align-items: center;
+
+  @if $va-align != center {
+    justify-content: left;
+  } @else {
+    justify-content: center;
+  }
+}
+
+@mixin no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@mixin btn($width, $height) {
+  width: $width;
+  height: $height;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}

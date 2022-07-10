@@ -1,0 +1,78 @@
+.schedule__menu {
+  top: 1.7rem;
+  left: 0;
+  width: 251px;
+
+  .calendar__menu {
+    position: static !important;
+    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    box-shadow: none;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  .selection__title {
+    font-weight: 700;
+  }
+
+  .cta__btn {
+    &.add__btn {
+      font-weight: 700;
+    }
+
+    &.cancel__btn {
+      color: #db4c3f;
+      &:hover {
+        &::after {
+          content: none;
+        }
+      }
+    }
+  }
+
+  .app__menu_footer {
+    display: flex;
+    align-items: center;
+
+    & > .cta__btn {
+      margin-left: auto;
+    }
+
+    &.show__tag {
+      .add__btn_wrapper {
+        display: none;
+      }
+    }
+  }
+}
+
+.available__date_wrapper {
+  cursor: pointer;
+  margin: 0.5rem 0.6rem 0.6rem;
+  display: flex;
+
+  .due__date_information {
+    padding-top: 3px;
+    margin-left: 0.6rem;
+  }
+
+  .quantity {
+    margin: 0.25rem 0 0.5rem;
+    font-size: 0.625rem;
+  }
+
+  .due__time {
+    padding-top: 3px;
+    font-size: 0.8rem;
+    margin-left: auto;
+  }
+
+  &.invalid__date {
+    cursor: auto;
+  }
+}

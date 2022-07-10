@@ -1,0 +1,136 @@
+@import "@assets_styles/AppMixins";
+
+.collaborators__tab_content {
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem 0;
+
+  .tab__content_footer {
+    margin-top: 6rem;
+  }
+}
+
+.invite__input_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .input__box {
+    border-color: #f0f0f0;
+    padding: 0.325rem 0.65rem;
+    width: 66.25%;
+    margin-top: 0;
+
+    &::placeholder {
+      font-size: 0.75rem;
+      color: $generic-gray-txt-clr;
+      letter-spacing: 0.5px;
+    }
+  }
+}
+
+.collaborator__info_list {
+  overflow-y: auto;
+  margin: 1.575rem 0.75rem 0 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+  max-height: 280px;
+}
+
+.collaborator__info_wrapper {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 1.55rem;
+  }
+
+  .collaborator__avatar {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  .collaborator__info {
+    position: relative;
+    padding: 0 2.35rem;
+
+    .collaborator__name_wrapper {
+      display: flex;
+      align-items: center;
+
+      .collaborator__name {
+        font-weight: 700;
+        font-size: 0.75rem;
+        margin-right: 0.5rem;
+        padding: 0.2rem 0.15rem;
+      }
+
+      .collaboration__status {
+        font-weight: 100;
+        color: #fff;
+        font-size: 0.65rem;
+        padding: 0.2rem 0.15rem;
+        border-radius: 0.2rem;
+        text-transform: uppercase;
+
+        &.pending {
+          background-color: #3fa9f5;
+        }
+
+        &.collaborating {
+          display: none;
+        }
+      }
+    }
+
+    .collaborator__email {
+      font-size: 0.8rem;
+      color: $generic-gray-txt-clr;
+      font-weight: 400;
+    }
+  }
+
+  .app__btn_wrapper {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: none;
+
+    .btn__name_wrapper {
+      width: 16px;
+      height: 16px;
+    }
+
+    .btn__name_wrapper {
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &:hover,
+  &:focus {
+    .app__btn_wrapper {
+      display: block;
+    }
+  }
+}
+
+.tab__content_footer {
+  .feature__description {
+    text-align: center;
+    font-weight: 400;
+
+    .feature__summary {
+      margin-bottom: 1rem;
+    }
+
+    .feature__details {
+      color: $generic-gray-txt-clr;
+      font-size: 0.875rem;
+      line-height: 1.4;
+    }
+  }
+}

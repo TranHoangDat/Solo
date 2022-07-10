@@ -1,0 +1,85 @@
+@import "@assets_styles/AppMixins";
+
+.notification__list {
+  .notification__item {
+    .mark_ar__btn {
+      .app__label_wrapper {
+        position: fixed;
+      }
+    }
+  }
+}
+
+.notification__item {
+  display: flex;
+  padding: 0.75rem 0.75rem;
+  border-bottom: 1px solid #eee;
+
+  &:last-child {
+    margin-bottom: 0.65rem;
+  }
+
+  &.unread {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: calc(100% + 1px);
+      border-left: 4px solid #dd4b39;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #eee;
+  }
+}
+
+.notification__icon {
+  position: relative;
+
+  .type__icon {
+    position: absolute;
+    top: 2.25rem;
+    left: 2.25rem;
+  }
+}
+
+.notification__information {
+  font-size: 0.8rem;
+  padding: 0.1rem 0.75rem 0 0.85rem;
+  line-height: 1.4;
+
+  .summary__description {
+    font-size: 0.8rem;
+  }
+
+  .add__btn {
+    margin: 0.2rem 0 0.5rem;
+  }
+
+  .detailed__description {
+    color: $generic-gray-txt-clr;
+    margin: 0.2rem 0 0.5rem;
+  }
+
+  .time__distance {
+    color: $generic-gray-txt-clr;
+    margin-top: 0.25rem;
+  }
+}
+
+.notification__buttons_wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+
+  .mark_ar__btn {
+    width: 24px;
+    text-align: center;
+    margin: auto 0 0;
+  }
+}

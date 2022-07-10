@@ -1,0 +1,211 @@
+@import "@assets_styles/AppMixins";
+
+#app__header {
+  overflow-x: hidden;
+  height: $header-height;
+  background-color: $generic-bg-clr;
+
+  .app__container {
+    height: 100%;
+    padding: 0 0.5rem;
+
+    @include responsive_425() {
+      padding: 0 0.75rem;
+    }
+
+    @include responsive_751() {
+      padding: 0 2.5rem;
+    }
+  }
+
+  .app__nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav__wrapper {
+    display: flex;
+    align-items: center;
+
+    &_left {
+      margin-right: auto;
+
+      .header__btn {
+        margin-right: 0.2rem;
+      }
+
+      .search__bar {
+        position: relative;
+        height: 1.8rem;
+
+        display: none;
+
+        @include responsive_751() {
+          display: block;
+          padding-left: 0.15rem;
+        }
+
+        &.active {
+          display: block;
+        }
+
+        .search__input {
+          position: absolute;
+          z-index: 2;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: clamp(4rem, 15vw, 24rem);
+          background-image: url("../../assets/img/App/icons/Search-white-22px.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position-y: center;
+          background-position-x: 5px;
+          text-indent: 5px;
+          padding: 0 0.5rem;
+          background-size: 22px;
+          background-color: rgba(255, 255, 255, 0.2);
+          transition: all 0.3s;
+
+          &::placeholder {
+            color: transparent;
+          }
+
+          &:hover {
+            background-color: #fff;
+            background-image: url("../../assets/img/App/icons/Search-gray-22px.png");
+
+            @include responsive_751() {
+              &::placeholder {
+                @include responsive_751() {
+                  color: $generic-gray-txt-clr;
+                }
+              }
+            }
+          }
+
+          &:focus {
+            width: calc(100vw - 90px);
+            background-color: #fff;
+            background-image: none;
+
+            @include responsive_500() {
+              width: calc(100vw - 95px);
+            }
+
+            @include responsive_750() {
+              width: 28rem;
+              background-image: url("../../assets/img/App/icons/Search-gray-22px.png");
+            }
+
+            &::placeholder {
+              @include responsive_751() {
+                color: $generic-gray-txt-clr;
+              }
+            }
+
+            & ~ .search__bar_btn {
+              height: 1.5rem;
+              opacity: 1;
+            }
+          }
+
+          @include responsive_500() {
+            width: clamp(4rem, 32vw, 24rem);
+          }
+
+          @include responsive_750() {
+            position: relative;
+            padding: 0 2rem;
+            width: 12.35rem;
+          }
+
+          @include responsive_751() {
+            &::placeholder {
+              color: #fff;
+              font-size: 0.75rem;
+            }
+          }
+        }
+
+        &_btn {
+          opacity: 0;
+          @include btn(1.5rem, 1.5rem);
+          height: 0;
+          position: absolute;
+          z-index: 2;
+          left: 0;
+          top: 50%;
+          transform: translate(calc(100vw - 145px), -50%);
+          transition: all 0.2s;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+
+          &:hover,
+          &:focus {
+            background-color: rgba(130, 130, 130, 0.15);
+          }
+
+          &:last-child {
+            transform: translate(calc(100vw - 120px), -50%);
+          }
+
+          @include responsive_750() {
+            transform: translate(24.5rem, -50%);
+
+            &:last-child {
+              transform: translate(26rem, -50%);
+            }
+          }
+        }
+      }
+    }
+
+    &_right {
+      padding-left: 0;
+
+      @include responsive_750() {
+        padding-left: 3.7rem;
+      }
+
+      @include responsive_751() {
+        padding-left: 2.8rem;
+      }
+
+      .header__btn {
+        margin-right: 1rem;
+
+        @include responsive_750() {
+          margin-right: 0.8rem;
+        }
+      }
+
+      .user__productivity {
+        @include responsive_751() {
+          width: 3.5rem;
+          justify-content: space-evenly;
+        }
+
+        span {
+          display: none;
+          font-size: 0.8rem;
+          color: #fff;
+
+          @include responsive_751() {
+            display: block;
+          }
+        }
+      }
+
+      .user__avatar {
+        margin-right: 0.2rem;
+
+        @include responsive_650() {
+          margin-right: 0.8rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@import "@assets_styles/AppMixins";
+
+.app__menu_wrapper.notification__menu {
+  position: fixed;
+  top: 2.35rem;
+  right: 0;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: overlay;
+  // min-height: 254px;
+  max-height: 789px;
+
+  @include responsive_450() {
+    width: 442px;
+  }
+}
+
+.menu__tabs_wrapper {
+  padding-top: 0.6rem;
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+
+  .menu__tab {
+    position: relative;
+    padding: 0.6rem 0 1rem;
+    margin-right: 1rem;
+    color: $generic-gray-txt-clr;
+    font-size: 0.8rem;
+    cursor: pointer;
+
+    &.selected {
+      font-weight: 700;
+      color: $generic-dark-txt-clr;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        border-bottom: 1px solid $generic-dark-txt-clr;
+      }
+    }
+  }
+
+  .mark_ar__btn {
+    margin-left: auto;
+  }
+}

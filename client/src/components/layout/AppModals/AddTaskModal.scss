@@ -1,0 +1,47 @@
+@import "@assets_styles/AppMixins";
+
+#add_task__modal {
+  width: 98vw;
+  padding: 1.5rem 1.6rem 1.3rem;
+
+  @include responsive_751() {
+    width: 34.25rem;
+    max-height: 24rem;
+  }
+
+  .modal__body {
+    padding: 0;
+  }
+
+  .modal__wrapper {
+    margin-bottom: 0;
+
+    .modal__label {
+      position: relative;
+      font-size: 0.85rem;
+      margin-bottom: 0.75rem;
+
+      .icon {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        color: #989898;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+          color: #202020;
+        }
+      }
+    }
+  }
+
+  .task__input {
+    .cancel__btn {
+      display: none;
+    }
+  }
+}

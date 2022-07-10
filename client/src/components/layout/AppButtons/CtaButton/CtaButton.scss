@@ -1,0 +1,39 @@
+.cta__btn {
+  width: fit-content;
+  cursor: pointer;
+  font-size: 0.8rem;
+
+  &.add__btn {
+    color: #db4c3f;
+
+    &.bg__red {
+      color: #fff;
+      font-weight: 700;
+      background-color: #f4cac6;
+      padding: 0.6rem 0.7rem;
+      border-radius: 0.2rem;
+      &.available {
+        background-color: #db4c3f;
+      }
+    }
+  }
+
+  &.cancel__btn {
+    color: #202020;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      border-bottom: 1px solid #202020;
+    }
+
+    &:hover {
+      &::after {
+        content: "";
+      }
+    }
+  }
+}

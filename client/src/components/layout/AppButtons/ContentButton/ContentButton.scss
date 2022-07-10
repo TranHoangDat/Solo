@@ -1,0 +1,300 @@
+@import "@assets_styles/AppMixins";
+
+.sort__btn {
+  .icon {
+    path {
+      stroke: #808080;
+    }
+  }
+
+  &:hover {
+    .icon {
+      path {
+        stroke: #202020;
+      }
+    }
+  }
+}
+
+.btn__name_wrapper {
+  cursor: pointer;
+  border-radius: 0.2rem;
+
+  .btn__icon {
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #eeeeee;
+
+    & ~ .app__label_wrapper {
+      display: block;
+    }
+
+    .icon {
+      color: #202020;
+    }
+  }
+}
+
+.app__btn_wrapper.content__btn {
+  &:hover,
+  &:focus {
+    .btn__name_wrapper {
+      .btn__name {
+        color: #202020;
+      }
+
+      .btn__icon {
+        path {
+          fill: #202020;
+        }
+      }
+    }
+
+    &.edit__btn,
+    &.attach_file__btn {
+      .icon {
+        path {
+          fill: #fff;
+          stroke: #202020;
+        }
+      }
+    }
+
+    &.emotion__btn {
+      .icon {
+        color: #202020;
+      }
+    }
+  }
+}
+
+.content__btn {
+  .btn__name_wrapper {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+
+  &.label__btn,
+  &.priority__btn,
+  &.reminder__btn,
+  &.comment__btn,
+  &.schedule__btn {
+    path {
+      fill: #808080;
+    }
+  }
+
+  &.edit__btn,
+  &.attach_file__btn {
+    .icon {
+      path {
+        fill: #fff;
+        stroke: #808080;
+        stroke-width: 1;
+      }
+    }
+  }
+
+  &.record__btn {
+    .icon {
+      path {
+        fill: #808080;
+      }
+    }
+  }
+
+  &.config__btn {
+    .btn__name_wrapper {
+      width: 24px;
+      height: 24px;
+      margin-right: 0;
+      padding: 0;
+
+      .btn__icon {
+        justify-content: space-evenly;
+      }
+
+      .dot {
+        width: 4px;
+        height: 4px;
+        background-color: #fff;
+        border: 1px solid #828282;
+        border-radius: 50%;
+      }
+
+      &:hover,
+      &:focus {
+        .dot {
+          border-color: #202020;
+        }
+      }
+    }
+  }
+
+  &.prev__btn,
+  &.next__btn,
+  &.today__btn {
+    .btn__name_wrapper {
+      display: block;
+      cursor: default;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    &.available {
+      .btn__name_wrapper {
+        cursor: pointer;
+      }
+
+      .btn__icon {
+        .icon {
+          color: #808080;
+        }
+      }
+
+      &:hover {
+        background-color: #eeeeee;
+      }
+    }
+  }
+
+  &.change_sorting__btn {
+    .btn__name_wrapper {
+      width: auto;
+
+      .btn__name {
+        padding: 0.375rem 0.55rem;
+        font-size: 0.835rem;
+        color: $generic-gray-txt-clr;
+        font-weight: 700;
+        display: block;
+      }
+    }
+  }
+
+  &.full {
+    .btn__name_wrapper {
+      display: flex;
+      align-items: center;
+
+      .btn__name {
+        color: $generic-gray-txt-clr;
+        font-weight: 400;
+        font-size: 0.75rem;
+        display: none;
+      }
+
+      .icon {
+        width: 19px !important;
+        height: 19px !important;
+      }
+    }
+
+    @include responsive_1057() {
+      .btn__name_wrapper {
+        width: auto;
+        padding: 0.25rem;
+
+        .btn__name {
+          display: block;
+          margin-left: 0.25rem;
+        }
+      }
+    }
+
+    &:hover {
+      .btn__name_wrapper {
+        .btn__name {
+          color: $generic-dark-txt-clr;
+        }
+      }
+    }
+  }
+
+  &.sidebar__btn {
+    position: absolute;
+    cursor: pointer;
+    align-items: center;
+
+    .btn__name_wrapper {
+      display: none;
+    }
+
+    &.config__btn {
+      top: 50%;
+      right: 0.75rem;
+      transform: translateY(-50%);
+
+      justify-content: space-between;
+
+      .dot {
+        background-color: $generic-gray-txt-clr;
+      }
+
+      &:hover,
+      &:focus {
+        .btn__name_wrapper {
+          background-color: transparent;
+        }
+
+        .dot {
+          background-color: $generic-dark-txt-clr;
+        }
+      }
+    }
+
+    &.add_project__btn {
+      top: 0;
+      right: 1rem;
+      width: 28px;
+      height: 28px;
+      justify-content: center;
+
+      .add__icon {
+        font-size: 1rem;
+        color: #b3b3b3;
+
+        @include responsive_751() {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  &.set_priority__btn {
+    .btn__name_wrapper {
+      width: 28px;
+      height: 28px;
+
+      .btn__icon {
+        path {
+          fill: unset !important;
+        }
+      }
+    }
+
+    &.selected {
+      .btn__name_wrapper {
+        border: 1px solid #ddd;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      .btn__name_wrapper {
+        .btn__icon {
+          path {
+            fill: unset !important;
+          }
+        }
+      }
+    }
+  }
+}

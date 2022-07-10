@@ -1,0 +1,156 @@
+@import "@assets_styles/AppMixins";
+
+.input__buttons_wrapper {
+  margin-top: 0.6rem;
+  display: flex;
+  align-items: center;
+
+  .cta__btn.add__btn {
+    margin-right: 0.75rem;
+  }
+}
+
+.input__box {
+  font-size: unset;
+  height: auto;
+  text-indent: 0;
+
+  &:hover,
+  &:focus {
+    border-color: rgba(0, 0, 0, 0.4);
+  }
+
+  &.focus {
+    border-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .textarea__wrapper {
+    position: relative;
+
+    .input__textarea {
+      width: 100%;
+      font-family: "Noto Sans", sans-serif;
+      font-size: 0.825rem;
+      font-weight: 400;
+
+      &::placeholder {
+        color: #bfbfbf;
+        font-size: 0.8rem;
+      }
+    }
+
+    .shadow__textarea {
+      position: absolute;
+      top: 0;
+      left: 0;
+      visibility: hidden;
+      overflow: hidden;
+      width: 100%;
+      height: 0;
+      font-family: "Noto Sans", sans-serif;
+      font-size: 0.825rem;
+      font-weight: 100;
+    }
+  }
+}
+
+.task__input_wrapper {
+  padding: 0.6rem;
+  border-radius: 0.3rem;
+
+  .task__buttons_wrapper {
+    display: flex;
+
+    &:first-child {
+      margin-bottom: 0.65rem;
+    }
+
+    .task__btn:first-child {
+      margin-right: 0.5rem;
+    }
+
+    &:last-child {
+      .app__btn_wrapper:not(:last-child) {
+        margin-right: 0.75rem;
+      }
+    }
+  }
+}
+
+.task__buttons_container {
+  margin-top: 0.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  &.flex__wrap {
+    .task__buttons_wrapper:first-child {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+.task__input {
+  width: 100%;
+  min-height: 5rem;
+  display: block;
+}
+
+.section__input {
+  width: 16.25rem;
+  height: fit-content;
+
+  .section__content_input {
+    margin-top: 0;
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 0.3rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-indent: 0.5rem;
+
+    &::placeholder {
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      color: $generic-gray-txt-clr;
+    }
+  }
+
+  .input__buttons_wrapper {
+    display: flex;
+  }
+}
+
+.comment__input_wrapper {
+  padding: 0.55rem 0.5rem;
+  border-radius: 0.3rem;
+
+  .app__btn_wrapper {
+    .btn__name_wrapper {
+      width: 2.5rem;
+      height: 2rem;
+      margin: 0;
+
+      .icon {
+        width: 18px !important;
+        height: 18px !important;
+      }
+    }
+  }
+
+  .input__buttons_wrapper {
+    margin-top: 0.3rem;
+    padding-top: 0.4rem;
+    border-top: 1px solid #eeeeee;
+
+    .input__btn {
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    .cta__btn.add__btn {
+      margin-right: 0;
+    }
+  }
+}

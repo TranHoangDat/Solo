@@ -1,0 +1,34 @@
+.app__label_wrapper {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  z-index: 8;
+  border-radius: 0.2rem;
+  background-color: #333333;
+
+  &.arrow {
+    &::before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      right: 10px;
+      width: 8px;
+      height: 8px;
+      background-color: #333;
+      border-left: 1px solid #333;
+      border-top: 1px solid #333;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.label__content {
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  color: #fff;
+
+  p:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+}

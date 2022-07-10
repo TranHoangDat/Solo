@@ -1,0 +1,45 @@
+.add_time__menu {
+  width: 220px;
+  z-index: 9;
+  padding: 0.5rem;
+  top: -4.5rem;
+  left: -4rem;
+
+  .input__box {
+    font-size: 0.8rem;
+    padding: 0.2rem;
+  }
+
+  .app__menu_item {
+    padding-bottom: 0.5rem;
+  }
+
+  .menu__input_wrapper {
+    position: relative;
+  }
+
+  .menu__buttons_wrapper {
+    justify-content: space-between;
+    padding: 0.75rem 0.5rem 0.25rem;
+  }
+
+  .app__tag_wrapper {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    left: 4.5rem;
+
+    .app__label_wrapper {
+      top: 1.6rem;
+      left: -4rem;
+      width: 180px;
+    }
+
+    &:hover {
+      .app__label_wrapper {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}

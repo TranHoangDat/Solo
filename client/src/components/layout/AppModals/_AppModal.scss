@@ -1,0 +1,353 @@
+@import "@assets_styles/AppMixins";
+
+.project__color {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0.75rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+
+  &.charcoal::before {
+    background-color: #808080;
+  }
+
+  &.berry__red::before {
+    background-color: #b8255f;
+  }
+
+  &.red::before {
+    background-color: #db4035;
+  }
+
+  &.orange::before {
+    background-color: #ff9933;
+  }
+
+  &.yellow::before {
+    background-color: #fad000;
+  }
+
+  &.olive__green::before {
+    background-color: #afb83b;
+  }
+
+  &.lime__green::before {
+    background-color: #7ecc49;
+  }
+
+  &.green::before {
+    background-color: #299438;
+  }
+
+  &.mint__green::before {
+    background-color: #6accbc;
+  }
+
+  &.teal::before {
+    background-color: #158fad;
+  }
+
+  &.sky__blue::before {
+    background-color: #14aaf5;
+  }
+
+  &.light__blue::before {
+    background-color: #96c3eb;
+  }
+
+  &.blue::before {
+    background-color: #4073ff;
+  }
+}
+
+.modal {
+  position: absolute;
+  z-index: 100;
+  background-color: #ffffff;
+  box-shadow: $generic-box-shadow;
+  border-radius: 0.7rem;
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  .input__box {
+    &:hover,
+    &:focus {
+      border-color: rgba(0, 0, 0, 0.4);
+    }
+  }
+}
+
+.app__modal {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .modal__body {
+    padding: 1.4rem 1.5rem 0;
+
+    .modal__wrapper {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1.35rem;
+
+      &:last-child {
+        margin-bottom: 1.25rem;
+      }
+
+      .modal__label {
+        color: $generic-dark-txt-clr;
+        font-size: 0.9rem;
+        font-weight: 700;
+        display: inline-flex;
+        flex-direction: column;
+        margin-bottom: 0.3rem;
+      }
+
+      .modal__input {
+        position: relative;
+        color: $generic-dark-txt-clr;
+      }
+    }
+  }
+
+  .modal__footer {
+    padding: 0.8rem 1.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-top: 1px solid #d9d9d9;
+
+    .cta__btn {
+      padding: 0.565rem 0.7rem;
+    }
+
+    .cancel__btn {
+      padding: 0.5rem 0.7rem;
+      margin-right: 0.6rem;
+      font-weight: 700;
+      color: $generic-dark-txt-clr;
+      border-radius: 0.25rem;
+      border: 1px solid #d9d9d9;
+      background-color: #f3f3f3;
+
+      &:hover {
+        border-color: #bcbcbc;
+
+        &::after {
+          content: none;
+        }
+      }
+
+      &:focus {
+        border-color: #000000;
+      }
+    }
+  }
+}
+
+.project__modal {
+  overflow: hidden;
+  top: #{$header-height};
+  left: 0;
+  transform: translate(0, 0);
+  width: 100vw;
+  height: calc(100vh - #{$header-height});
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+
+  @include responsive_751() {
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 40.6rem;
+    height: calc(100vh - #{$header-height} - 1.25rem);
+    border-radius: 0.7rem;
+  }
+
+  .modal__header {
+    background-color: #fff;
+    border-bottom: none;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 0.7rem;
+    border-top-right-radius: 0.7rem;
+
+    .modal__wrapper {
+      width: 100%;
+      padding: 0 1.5rem 0;
+      margin-bottom: 0.5rem;
+
+      .modal__label {
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .project__name_wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 0 0 0.5rem;
+
+      .project__color::before {
+        left: 0;
+        width: 7px;
+        height: 7px;
+      }
+
+      .project__name {
+        width: 95%;
+        height: 18px;
+        padding: 0.1625rem 0;
+        font-size: 0.8rem;
+        font-weight: 400;
+        padding-left: 1.35rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .modal__btn {
+      width: 26px;
+      height: 26px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgb(238, 238, 238);
+      }
+
+      .icon {
+        width: 100%;
+        height: 100%;
+        color: #8c8c8c;
+      }
+    }
+  }
+
+  .modal__body {
+    .modal__tabs_wrapper {
+      margin-top: 0.6rem;
+      display: grid;
+      text-align: center;
+      color: $generic-gray-txt-clr;
+      font-weight: 400;
+      font-size: 0.8rem;
+
+      .modal__tab {
+        position: relative;
+        padding: 0.55rem 0;
+        border-bottom: 1px solid #e6e6e6;
+        cursor: pointer;
+
+        .quantity {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          margin-left: 0.15rem;
+        }
+
+        &:hover {
+          color: #000000;
+        }
+
+        &.active {
+          font-weight: 700;
+          color: #000000;
+          border-color: #202020;
+        }
+      }
+    }
+  }
+}
+
+.toggle__switch {
+  position: relative;
+  height: 1.5rem;
+  margin: 1.2rem 0 0.5rem;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 0.9rem;
+  padding-left: 2.75rem;
+}
+
+.switch {
+  width: 32px;
+  height: 18px;
+  top: 50%;
+  left: 0;
+  bottom: 0;
+  transform: translateY(-50%);
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #aaaaaa;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  height: 12px;
+  width: 12px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #299438;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #299438;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translate(16.2px, -50%);
+  -ms-transform: translate(16.2px, -50%);
+  transform: translate(16.2px, -50%);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

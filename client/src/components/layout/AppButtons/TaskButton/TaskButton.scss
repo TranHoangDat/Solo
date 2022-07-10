@@ -1,0 +1,131 @@
+@import "@assets_styles/AppMixins";
+
+.task__btn {
+  .task__btn_wrapper {
+    display: flex;
+    align-items: center;
+    padding: 0.325rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #555555;
+    border: 1px solid #cccccc;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    .btn__name {
+      display: block;
+    }
+
+    .btn__icon {
+      width: auto;
+      height: auto;
+
+      .icon {
+        color: #202020;
+        width: 15px !important;
+        height: 15px !important;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #eee;
+    }
+
+    &.focus {
+      background-color: #eee;
+    }
+  }
+
+  &.schedule__btn {
+    .task__btn_wrapper {
+      .btn__name {
+        padding-left: 3px;
+      }
+    }
+  }
+
+  &:hover {
+    .icon {
+      color: inherit;
+    }
+  }
+
+  &.select_project__btn {
+    .task__btn_wrapper {
+      height: 100%;
+
+      padding: 0 0.45rem 0 0.45rem;
+    }
+
+    .btn__name {
+      display: flex;
+      height: 100%;
+      padding: 0.438rem 0 0 0.25rem;
+
+      .delimiter {
+        margin: 0 4px;
+      }
+
+      .btn__name_item {
+        max-width: 50px;
+        height: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  &.prev__btn,
+  &.next__btn {
+    .task__btn_wrapper {
+      padding: 0.25rem 0.325rem;
+
+      .btn__icon {
+        .icon {
+          width: 18px !important;
+          height: 18px !important;
+          color: #d9d9d9;
+          transition: color 0.2s ease;
+        }
+      }
+    }
+
+    &.available {
+      .task__btn_wrapper {
+        .btn__icon {
+          .icon {
+            color: #808080;
+          }
+        }
+
+        &:hover {
+          .btn__icon {
+            .icon {
+              color: #202020;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.today__btn {
+    .task__btn_wrapper {
+      height: 28px;
+      padding: 0 0.45rem 0;
+
+      .btn__name {
+        transition: color 0.2s ease;
+      }
+
+      &:hover {
+        .btn__name {
+          color: #808080;
+        }
+      }
+    }
+  }
+}

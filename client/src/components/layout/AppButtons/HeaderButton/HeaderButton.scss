@@ -1,0 +1,19 @@
+@import "@assets_styles/AppMixins";
+
+.header__btn_wrapper {
+  position: relative;
+}
+
+.header__btn {
+  @include btn(1.8rem, 1.8rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.2s;
+}
+
+.header__btn:hover,
+.header__btn:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+}

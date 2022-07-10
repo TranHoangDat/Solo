@@ -1,0 +1,386 @@
+img {
+  width: 100%;
+}
+
+#home__advantages {
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.advantage__gallery {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.advantage__gallery img {
+  max-width: 750px;
+}
+
+.advantage__item {
+  margin: 3rem 0;
+}
+
+.advantage__list .advantage__item:last-child {
+  margin-bottom: 0;
+}
+
+.advantage__image {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.advantage__item:first-child .advantage__image .advantage__figure {
+  margin-left: -15px;
+  margin-right: -5px;
+}
+
+.advantage__item:nth-child(2) .advantage__image .advantage__figure {
+  margin-left: -15px;
+  margin-right: -5px;
+}
+
+.advantage__item:last-child .advantage__image .advantage__figure {
+  margin-left: -50px;
+  margin-right: -15px;
+}
+
+.ball,
+.cube,
+.triangle {
+  position: absolute;
+}
+
+.ball {
+  max-width: 86px;
+  max-height: 56px;
+}
+
+.cube {
+  max-width: 145px;
+  max-height: 82px;
+}
+
+.triangle {
+  max-width: 199px;
+  max-height: 101px;
+}
+
+.advantage_1__cube {
+  top: 65%;
+  left: -9%;
+  width: 30%;
+}
+
+.advantage_1__ball {
+  width: 17%;
+  left: 8%;
+  bottom: -7%;
+}
+
+.advantage_2__triangle {
+  left: 30%;
+  bottom: -15%;
+  width: 40%;
+}
+
+.advantage_2__cube {
+  width: 43px;
+  top: 34%;
+  right: -2%;
+}
+
+.advantage_3__cube {
+  width: 70px;
+  top: 28%;
+  right: -11%;
+}
+
+.advantage_3__ball {
+  width: 60px;
+  left: -12%;
+  top: 17.5%;
+}
+
+.advantage__wrapper {
+  width: 90%;
+  margin: 3rem auto;
+}
+
+.advantage__item:last-child .advantage__wrapper {
+  margin: 0 auto;
+}
+
+.advantage__icon {
+  margin-left: -105px;
+  display: none;
+}
+
+.advantage__icon img {
+  width: 55%;
+}
+
+.main__description {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-family: var(--main-description-font-family);
+}
+
+.sub__description {
+  max-width: 265px;
+  margin-bottom: 2.5rem;
+}
+
+@media screen and (min-width: 550px) {
+  .advantage_2__cube {
+    width: 60px;
+    right: -3%;
+  }
+
+  .advantage_3__ball {
+    left: -6%;
+  }
+
+  .advantage_3__cube {
+    right: -8%;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .advantage__wrapper {
+    width: 70%;
+  }
+
+  .advantage_2__cube {
+    width: 80px;
+    right: -4%;
+  }
+
+  .advantage_3__cube {
+    width: 80px;
+    right: -7%;
+  }
+
+  .advantage_3__ball {
+    width: 80px;
+    left: -5%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #home__advantages {
+    margin-bottom: 1rem;
+  }
+
+  .advantage__item:last-child .advantage__image {
+    margin-right: 0;
+  }
+
+  .advantage__image {
+    width: 460px;
+    margin: 0 auto;
+  }
+
+  .advantage__item {
+    margin: 4rem 0;
+  }
+
+  .advantage__item:first-child .advantage__image .advantage__figure {
+    margin-left: -30px;
+    margin-right: 2px;
+  }
+
+  .advantage__item:nth-child(2) .advantage__image .advantage__figure {
+    margin-left: -25px;
+    margin-right: -5px;
+  }
+
+  .advantage__item:last-child .advantage__image .advantage__figure {
+    margin-left: -130px;
+    margin-right: 80px;
+  }
+
+  .advantage__wrapper {
+    width: 65%;
+  }
+
+  .advantage_1__cube {
+    left: -12%;
+  }
+
+  .advantage_1__ball {
+    width: 20%;
+    left: 9%;
+  }
+
+  .advantage_2__cube {
+    right: -6%;
+  }
+
+  .advantage_2__triangle {
+    left: 6%;
+    bottom: -10%;
+  }
+
+  .advantage_3__cube {
+    right: 11%;
+  }
+
+  .advantage_3__ball {
+    left: -30%;
+  }
+
+  .main__description {
+    font-size: 2rem;
+    line-height: 1.1667;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .advantage__item {
+    display: flex;
+    align-items: center;
+    margin: 4rem 0;
+  }
+
+  .advantage__image {
+    margin: 0;
+    margin-right: auto;
+  }
+
+  .advantage__item:first-child {
+    margin-top: 0;
+  }
+
+  .advantage__item:last-child {
+    margin-bottom: 0;
+  }
+
+  .advantage__item:first-child .advantage__image .advantage__figure {
+    margin-left: -30px;
+  }
+
+  .advantage__item:nth-child(2) .advantage__image .advantage__figure {
+    margin-left: -30px;
+    margin-right: 0px;
+  }
+
+  .advantage__item:last-child .advantage__image .advantage__figure {
+    margin-left: -40px;
+    margin-right: -10px;
+  }
+
+  .advantage__item:last-child .advantage__wrapper {
+    margin: 0;
+    margin-left: auto;
+  }
+
+  .advantage_3__cube {
+    right: -8%;
+  }
+
+  .advantage_3__ball {
+    left: -10%;
+  }
+
+  .advantage__wrapper {
+    max-width: 340px;
+    padding-bottom: 40px;
+    margin: 0;
+  }
+
+  .advantage__icon {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1180px) {
+  .advantage__image {
+    width: 548px;
+  }
+
+  .advantage__item:nth-child(2) .advantage__image .advantage__figure {
+    margin-left: -74px;
+  }
+
+  .advantage__item:last-child .advantage__image .advantage__figure {
+    margin-left: -100px;
+  }
+
+  .advantage__wrapper {
+    max-width: 400px;
+    padding: 0 50px 100px 0;
+    margin: 0;
+  }
+
+  .advantage__icon {
+    margin-left: -145px;
+  }
+
+  .advantage__icon img {
+    width: 68%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .advantage__gallery {
+    margin-bottom: 2rem;
+  }
+
+  .advantage__item {
+    margin: 6rem 0;
+  }
+}
+
+@media screen and (min-width: 1550px) {
+  .advantage__list {
+    margin-top: 5rem;
+  }
+
+  .advantage__image {
+    width: 600px;
+    margin-right: 10rem;
+  }
+
+  .advantage__item:first-child .advantage__image .advantage__figure {
+    width: 577px;
+    margin: 0;
+  }
+
+  .advantage__item:nth-child(2) .advantage__image .advantage__figure {
+    width: 624px;
+    margin: 0;
+    margin-left: -40px;
+  }
+
+  .advantage__item:last-child .advantage__image .advantage__figure {
+    width: 669px;
+    margin: 0;
+    margin-left: -50px;
+  }
+
+  .advantage__wrapper {
+    padding-bottom: 30px;
+    padding-left: 80px;
+    padding-right: 0;
+    max-width: 500px;
+  }
+
+  .advantage__icon {
+    margin-left: -170px;
+  }
+
+  .main__description {
+    font-size: 2.5rem;
+  }
+
+  .sub__description {
+    max-width: 290px;
+    font-size: 1.1rem;
+  }
+
+  .advantage__item:last-child .advantage__wrapper {
+    margin-left: 10rem;
+  }
+}

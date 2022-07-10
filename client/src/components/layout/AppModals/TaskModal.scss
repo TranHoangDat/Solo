@@ -1,0 +1,72 @@
+@import "@assets_styles/AppMixins";
+
+#task__modal {
+  .task__content_wrapper {
+    padding-left: 2.15rem;
+
+    .task__checkbox {
+      .task__checkmark {
+        top: 3px;
+        left: 3px;
+      }
+    }
+
+    .task__content {
+      overflow-y: auto;
+      font-size: 0.95rem;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      line-height: 1.55;
+      min-height: 1.7rem;
+      max-height: 12.5rem;
+    }
+  }
+
+  .select_project__btn {
+    .project__name {
+      // max-width: 100px;
+    }
+
+    .section__name {
+      // max-width: 100px;
+    }
+  }
+
+  .modal__buttons_container {
+    display: block;
+    margin-top: 0.5rem;
+    padding-left: 0.05rem;
+  }
+
+  .modal__buttons_wrapper {
+    display: flex;
+    padding-left: 2.1rem;
+    margin-bottom: 0.7rem;
+
+    .schedule__btn.task__btn {
+      margin-right: 0.25rem;
+    }
+
+    &:last-child {
+      justify-content: flex-end;
+      margin-bottom: 0.2rem;
+
+      .app__btn_wrapper:not(:last-child) {
+        margin-right: 0.75rem;
+      }
+    }
+  }
+}
+
+.modal__body {
+  padding: 0 1.75rem;
+
+  .modal__wrapper {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .modal__tabs_wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

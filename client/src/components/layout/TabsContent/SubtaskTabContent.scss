@@ -1,0 +1,34 @@
+@import "@assets_styles/AppMixins";
+
+.subtask__tab_content {
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 1.25rem 0 0.5rem;
+
+  .task__list {
+    padding: 0 2rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .task__input {
+    margin-bottom: 1.25rem;
+  }
+
+  .tab__content_footer {
+    padding: 0 1.9rem;
+
+    .add__btn_wrapper {
+      margin: 0.5rem 0;
+    }
+  }
+
+  .project__task.list__view {
+    .task__content_wrapper {
+      padding: 0 1.75rem 0 1.7rem !important;
+    }
+
+    .task__buttons_wrapper {
+      right: -1.4rem;
+    }
+  }
+}

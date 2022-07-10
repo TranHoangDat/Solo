@@ -1,0 +1,137 @@
+###/api/auth/
+POST  http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "ltd2000.mus@gmail.com",
+    "password": "Ltd231220@"
+}
+###
+POST  http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "email": "ducluuthien@gmail.com",
+    "password": "Ltd231220@"
+}
+
+
+
+
+###/project
+GET  http://localhost:5000/project
+Authorization: Bearee eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZDRlNTQwMS04MTAwLTQyM2UtYTNmZi03ZDU5ZWMzMGU2YTciLCJpYXQiOjE2MjI3MzcyOTd9.W8sdiTrPNajmNVPm0QJNyFhgJpOQI3-ZROGUiwchoxs
+###
+POST http://localhost:5000/project/
+Content-Type: application/json
+Authorization: Bearee eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZDRlNTQwMS04MTAwLTQyM2UtYTNmZi03ZDU5ZWMzMGU2YTciLCJpYXQiOjE2MjI3MzcyOTd9.W8sdiTrPNajmNVPm0QJNyFhgJpOQI3-ZROGUiwchoxs
+
+{
+    "name": "project1",
+    "color": "red",
+    "view": "BOARD",
+    "isFavorite": true
+}
+###
+PUT  http://localhost:5000/project/c0c427a9-9daa-4d36-93c7-eecec76a8bbf
+Content-Type: application/json
+Authorization: Bearee eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZDRlNTQwMS04MTAwLTQyM2UtYTNmZi03ZDU5ZWMzMGU2YTciLCJpYXQiOjE2MjI3MzcyOTd9.W8sdiTrPNajmNVPm0QJNyFhgJpOQI3-ZROGUiwchoxs
+
+{
+    "name": "project4",
+    "color": "black",
+    "view": "LIST",
+    "isFavorite": true
+}
+###
+DELETE   http://localhost:5000/project/4494de13-ff26-4da7-bbd2-f47ed7b184ef
+Content-Type: application/json
+Authorization: Bearee eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZDRlNTQwMS04MTAwLTQyM2UtYTNmZi03ZDU5ZWMzMGU2YTciLCJpYXQiOjE2MjI3MzcyOTd9.W8sdiTrPNajmNVPm0QJNyFhgJpOQI3-ZROGUiwchoxs
+###
+POST   http://localhost:5000/project/invite?projectId=4494de13-ff26-4da7-bbd2-f47ed7b184ef&invitedUser=97262623-860a-4ae0-8c93-562e5202c66b
+Content-Type: application/json
+Authorization: Bearee eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZDRlNTQwMS04MTAwLTQyM2UtYTNmZi03ZDU5ZWMzMGU2YTciLCJpYXQiOjE2MjI3MzcyOTd9.W8sdiTrPNajmNVPm0QJNyFhgJpOQI3-ZROGUiwchoxs
+###
+PUT   http://localhost:5000/project/invite?projectId=4494de13-ff26-4da7-bbd2-f47ed7b184ef
+Content-Type: application/json
+Authorization: Bearee eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5NzI2MjYyMy04NjBhLTRhZTAtOGM5My01NjJlNTIwMmM2NmIiLCJpYXQiOjE2MjI3Mzg0MDd9.W9kgtzSk63QxRSsB8RoB3QOb6bvf5SMaAWyHAdr-Uks
+###
+DELETE   http://localhost:5000/project/invite?projectId=4494de13-ff26-4da7-bbd2-f47ed7b184ef
+Content-Type: application/json
+Authorization: Bearee eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5NzI2MjYyMy04NjBhLTRhZTAtOGM5My01NjJlNTIwMmM2NmIiLCJpYXQiOjE2MjI3Mzg0MDd9.W9kgtzSk63QxRSsB8RoB3QOb6bvf5SMaAWyHAdr-Uks
+
+
+
+###Section
+GET http://localhost:5000/section?projectId=4494de13-ff26-4da7-bbd2-f47ed7b184ef
+Content-Type: application/json
+Authorization: Bearee eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZDRlNTQwMS04MTAwLTQyM2UtYTNmZi03ZDU5ZWMzMGU2YTciLCJpYXQiOjE2MjI3MzcyOTd9.W8sdiTrPNajmNVPm0QJNyFhgJpOQI3-ZROGUiwchoxs
+###
+POST http://localhost:5000/section?projectId=4494de13-ff26-4da7-bbd2-f47ed7b184ef
+Content-Type: application/json
+Authorization: Bearee eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZDRlNTQwMS04MTAwLTQyM2UtYTNmZi03ZDU5ZWMzMGU2YTciLCJpYXQiOjE2MjI3MzcyOTd9.W8sdiTrPNajmNVPm0QJNyFhgJpOQI3-ZROGUiwchoxs
+
+{
+    "name": "Section1",
+    "type": "ARCHIVED"
+}
+###
+PUT http://localhost:5000/section/6f5a0b4a-7599-4841-b6b2-8ac18728801a?projectId=4494de13-ff26-4da7-bbd2-f47ed7b184ef
+Content-Type: application/json
+Authorization: Bearee eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZDRlNTQwMS04MTAwLTQyM2UtYTNmZi03ZDU5ZWMzMGU2YTciLCJpYXQiOjE2MjI3MzcyOTd9.W8sdiTrPNajmNVPm0QJNyFhgJpOQI3-ZROGUiwchoxs
+
+{
+    "name": "Section2",
+    "type": "ARCHIVED"
+}
+###
+DELETE  http://localhost:5000/section/6f5a0b4a-7599-4841-b6b2-8ac18728801a?projectId=4494de13-ff26-4da7-bbd2-f47ed7b184ef
+Content-Type: application/json
+Authorization: Bearee eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZDRlNTQwMS04MTAwLTQyM2UtYTNmZi03ZDU5ZWMzMGU2YTciLCJpYXQiOjE2MjI3MzcyOTd9.W8sdiTrPNajmNVPm0QJNyFhgJpOQI3-ZROGUiwchoxs
+
+
+###Task
+GET http://localhost:5000/task?sectionId=6f5a0b4a-7599-4841-b6b2-8ac18728801a
+Content-Type: application/json
+Authorization: Bearee eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZDRlNTQwMS04MTAwLTQyM2UtYTNmZi03ZDU5ZWMzMGU2YTciLCJpYXQiOjE2MjI3MzcyOTd9.W8sdiTrPNajmNVPm0QJNyFhgJpOQI3-ZROGUiwchoxs
+###
+POST http://localhost:5000/task?sectionId=6f5a0b4a-7599-4841-b6b2-8ac18728801a
+Content-Type: application/json
+Authorization: Bearee eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZDRlNTQwMS04MTAwLTQyM2UtYTNmZi03ZDU5ZWMzMGU2YTciLCJpYXQiOjE2MjI3MzcyOTd9.W8sdiTrPNajmNVPm0QJNyFhgJpOQI3-ZROGUiwchoxs
+
+{
+    "content": "task1",
+    "priority": "PRIORITY1"
+}
+###
+PUT  http://localhost:5000/task/c7db8b6e-4a1b-481f-a53a-3fb788b59b4f?sectionId=6f5a0b4a-7599-4841-b6b2-8ac18728801a
+Content-Type: application/json
+Authorization: Bearee eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZDRlNTQwMS04MTAwLTQyM2UtYTNmZi03ZDU5ZWMzMGU2YTciLCJpYXQiOjE2MjI3MzcyOTd9.W8sdiTrPNajmNVPm0QJNyFhgJpOQI3-ZROGUiwchoxs
+
+{
+    "content": "task2",
+    "priority": "PRIORITY1"
+}
+###
+DELETE  http://localhost:5000/task/c7db8b6e-4a1b-481f-a53a-3fb788b59b4f?sectionId=6f5a0b4a-7599-4841-b6b2-8ac18728801a
+Content-Type: application/json
+Authorization: Bearee eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZDRlNTQwMS04MTAwLTQyM2UtYTNmZi03ZDU5ZWMzMGU2YTciLCJpYXQiOjE2MjI3MzcyOTd9.W8sdiTrPNajmNVPm0QJNyFhgJpOQI3-ZROGUiwchoxs
+
+
+###Comment 
+GET  http://localhost:5000/comment?projectId=28526ce3-a715-4db3-96fd-c5dac9aca4ad
+Content-Type: application/json
+Authorization: Bearee eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZDRlNTQwMS04MTAwLTQyM2UtYTNmZi03ZDU5ZWMzMGU2YTciLCJpYXQiOjE2MjI3MzcyOTd9.W8sdiTrPNajmNVPm0QJNyFhgJpOQI3-ZROGUiwchoxs
+###
+POST  http://localhost:5000/comment?projectId=28526ce3-a715-4db3-96fd-c5dac9aca4ad
+Content-Type: application/json
+Authorization: Bearee eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZDRlNTQwMS04MTAwLTQyM2UtYTNmZi03ZDU5ZWMzMGU2YTciLCJpYXQiOjE2MjI3MzcyOTd9.W8sdiTrPNajmNVPm0QJNyFhgJpOQI3-ZROGUiwchoxs
+
+{
+    "content": "comment 1"
+}
+
+###Activity
+GET  http://localhost:5000/activity?projectId=c0c427a9-9daa-4d36-93c7-eecec76a8bbf
+Content-Type: application/json
+Authorization: Bearee eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZDRlNTQwMS04MTAwLTQyM2UtYTNmZi03ZDU5ZWMzMGU2YTciLCJpYXQiOjE2MjI3MzcyOTd9.W8sdiTrPNajmNVPm0QJNyFhgJpOQI3-ZROGUiwchoxs

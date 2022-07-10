@@ -1,0 +1,18 @@
+@import "@assets_styles/AppMixins";
+
+.app__bar_wrapper {
+  padding: 0.6rem 0 0.625rem;
+  margin: 0 3.45rem 0.35rem;
+  border-bottom: 1px solid #f2f2f2;
+
+  @include responsive_1057() {
+    width: 800px;
+    margin: 0 auto 0.35rem;
+  }
+}
+
+.bar__buttons_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
