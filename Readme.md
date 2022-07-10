@@ -1,4 +1,4 @@
-18120312 - Trần Hoàng Đạt
+18120312 - Trần Hoàng Đạt\
 18120322 - Lưu Thiện Đức
 
 CÁCH BUILD SOURCECORDE:
